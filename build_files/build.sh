@@ -9,12 +9,13 @@ mkdir -p /usr/lib/opt/trinity
 mkdir -p /var/opt
 ln -s /usr/lib/opt/trinity /var/opt/trinity
 
+dnf -y group install base-x
+
 COPR_REPOS=(
 ublue-os/packages
 )
 
 PACKAGES=(
-base-x
 trinity-tdebase
 NetworkManager-tui
 fastfetch
