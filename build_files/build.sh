@@ -6,6 +6,8 @@ rpm -Uvh http://mirror.ppa.trinitydesktop.org/trinity/rpm/f42/trinity-r14/RPMS/n
 
 # Prepare directories
 mkdir -p /usr/lib/opt/trinity
+rm /opt
+mkdir /opt
 ln -s /usr/lib/opt/trinity /opt/trinity
 
 dnf -y group install base-x
