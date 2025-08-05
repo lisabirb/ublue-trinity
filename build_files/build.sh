@@ -2,23 +2,26 @@
 
 set -ouex pipefail
 
-### Install packages
+rpm -Uvh http://mirror.ppa.trinitydesktop.org/trinity/rpm/f42/trinity-r14/RPMS/noarch/trinity-repo-14.1.4-1.fc42.noarch.rpm
 
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
+COPR_REPOS=(
+ublue-os/packages
+)
 
-# this installs a package from fedora repos
-dnf5 install -y tmux 
+PACKAGES=(
+trinity-tdebase
+NetworkManager-tui
+fastfetch
+fish
+ublue-brew
+neovim
+)
 
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+for i in ${COPR_REPOS[@]}; do
+  dnf -y copr enable $i
+done
 
-#### Example for enabling a System Unit File
+dnf5 -y install ${PACKAGES[@]}
+
 
 systemctl enable podman.socket
