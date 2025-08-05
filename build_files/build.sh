@@ -14,6 +14,7 @@ ublue-os/packages
 )
 
 PACKAGES=(
+base-x
 trinity-tdebase
 NetworkManager-tui
 fastfetch
