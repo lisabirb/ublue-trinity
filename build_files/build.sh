@@ -15,7 +15,7 @@ ublue-os/packages
 )
 
 PACKAGES=(
-trinity-tdebase
+trinity-desktop
 NetworkManager-tui
 fastfetch
 fish
