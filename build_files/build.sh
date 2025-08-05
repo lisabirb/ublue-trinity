@@ -5,10 +5,8 @@ set -ouex pipefail
 rpm -Uvh http://mirror.ppa.trinitydesktop.org/trinity/rpm/f42/trinity-r14/RPMS/noarch/trinity-repo-14.1.4-1.fc42.noarch.rpm
 
 # Prepare directories
-mkdir -p /usr/lib/opt/trinity
 rm /opt
 mkdir /opt
-ln -s /usr/lib/opt/trinity /opt/trinity
 
 dnf -y group install base-x
 
