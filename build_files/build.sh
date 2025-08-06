@@ -32,6 +32,9 @@ dnf5 -y install ${PACKAGES[@]}
 # SELinux breaks tdm unfortunately
 sed -i 's/SELINUX=enforcing/SELINUX=permissive/' /etc/selinux/config
 
+# I don't like Firefox personally
+dnf5 -y remove firefox
+
 # Enable tdm
 systemctl enable tdm
 
