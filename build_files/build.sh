@@ -11,7 +11,7 @@ mkdir /opt
 dnf -y group install base-x
 
 PACKAGES=(
-trinity-desktop
+trinity-desktop-all
 )
 
 dnf5 -y install ${PACKAGES[@]}
