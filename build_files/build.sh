@@ -10,22 +10,9 @@ mkdir /opt
 
 dnf -y group install base-x
 
-COPR_REPOS=(
-ublue-os/packages
-)
-
 PACKAGES=(
 trinity-desktop
-NetworkManager-tui
-fastfetch
-fish
-ublue-brew
-neovim
 )
-
-for i in ${COPR_REPOS[@]}; do
-  dnf -y copr enable $i
-done
 
 dnf5 -y install ${PACKAGES[@]}
 
