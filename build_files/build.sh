@@ -12,6 +12,8 @@ dnf -y group install base-x
 
 PACKAGES=(
 trinity-desktop-all
+brightnessctl
+redshift
 )
 
 dnf5 -y install ${PACKAGES[@]}
