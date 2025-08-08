@@ -8,8 +8,6 @@ rpm -Uvh http://mirror.ppa.trinitydesktop.org/trinity/rpm/f42/trinity-r14/RPMS/n
 rm /opt
 mkdir /opt
 
-dnf -y group install base-x
-
 PACKAGES=(
 trinity-desktop-all
 brightnessctl
