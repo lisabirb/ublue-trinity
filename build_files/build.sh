@@ -5,7 +5,8 @@ set -ouex pipefail
 rpm -Uvh http://mirror.ppa.trinitydesktop.org/trinity/rpm/f42/trinity-r14/RPMS/noarch/trinity-repo-14.1.4-1.fc42.noarch.rpm
 
 # RPMFusion (required for some Trinity packages)
-dnf5 -y install rpmfusion-{free,nonfree}-release
+dnf5 -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+dnf5 -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Prepare directories
 rm /opt
