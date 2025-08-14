@@ -1,3 +1,6 @@
+# Discontinued
+A new Trinity image is being developed at https://github.com/lisabirb/desktop-base
+
 An immutable operating system with the Trinity desktop environment. Powered by Fedora and Universal Blue. Work in progress, not suitable for daily use.
 
 # Known issues
